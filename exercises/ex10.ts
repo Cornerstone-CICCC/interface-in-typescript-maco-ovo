@@ -4,3 +4,24 @@
 // User has address that may not be defined, and address has street, and zipCode.
 // Create an object user1 with nested property: address.
 // Use optional chaining to access the zipCode property to print with console.log.
+
+
+interface User {
+  address?: {
+    street: string;
+    zipCode: string | number;
+  };
+}
+
+const user1: User = {
+  address: {
+    street: "123 Main St",
+    zipCode: "V5B 1A1"
+  }
+};
+
+console.log(user1.address?.zipCode);
+
+
+const userWithoutAddress: User = {};
+console.log(userWithoutAddress.address?.zipCode);

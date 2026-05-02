@@ -6,12 +6,12 @@ Create an intersection type AdminEmployee that combines properties from both Adm
 Instantiate an object using the AdminEmployee type and display the properties.
 */
 
-interface Admin {
+type Admin = {
 	adminId: number;
 	editPermission: boolean;
 }
 
-interface Employee {
+type Employee = {
 	name: string;
 	department: string;
 	salary: number;
